@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "build": "rm -rf dist && babel server/ --out-dir dist/ --ignore ./node_modules",
-    "start:dev": "nodemon --exec babel-node server/index.js"
+    "start:dev": "nodemon --exec babel-node server/index.js",
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
@@ -19,6 +19,7 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "nodemon": "^1.18.10"
