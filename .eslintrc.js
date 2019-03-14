@@ -1,33 +1,67 @@
-{
+module.exports = {
     "root": true,
-    "extends": "airbnb-base",
     "env": {
-        "node": true,
-        "es6": true,
-        "mocha": true
+      "browser": true,
+      "es6": true,
+      "node": true,
     },
-    "rules": {
-        "one-var": 0,
-        "one-var-declaration-per-line": 0,
-        "new-cap": 0,
-        "consistent-return": 0,
-        "no-param-reassign": 0,
-        "comma-dangle": 0,
-        "curly": ["error", "multi-line"],
-        "import/no-unresolved": [2, { commonjs: true }],
-        "no-shadow": ["error", { "allow": ["req", "res", "err"] }],
-        "valid-jsdoc": ["error", {
-        "requireReturn": true,
-        "requireReturnType": true,
-        "requireParamDescription": false,
-        "requireReturnDescription": true
-        }],
-        "require-jsdoc": ["error", {
+    "extends": ["airbnb", "eslint:recommended"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 6
+    },
+      "rules": {
+        "comma-dangle": "off",
+        "consistent-return": "error",
+        "curly": [
+          "error",
+          "multi-line"
+        ],
+        "eol-last": "warn",
+        "import/extensions": "error",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-named-as-default": "off",
+        "import/no-unresolved": [
+          "error",
+          {
+            "commonjs": true
+          }
+        ],
+        "max-len": ["error", 80, 2],
+        "new-cap": "error",
+        "no-param-reassign": "off",
+        "no-shadow": [
+          "error",
+          {
+            "allow": ["req", "res", "err"]
+          }
+        ],
+        "no-trailing-spaces": "warn",      
+        "no-underscore-dangle": "error",
+        "one-var": "off",
+        "one-var-declaration-per-line": "off",
+        "prefer-const": "warn",
+        "quotes": ["error", "single"],
+        "require-jsdoc": [
+          "error",
+          {
             "require": {
-                "FunctionDeclaration": true,
-                "MethodDefinition": true,
-                "ClassDeclaration": true
+              "FunctionDeclaration": true,
+              "MethodDefinition": true,
+              "ClassDeclaration": true
             }
-        }]
-    }
-}
+          }
+        ],
+        "semi": ["error", "always"],
+        "valid-jsdoc": [
+          "error",
+          {
+            "requireReturn": true,
+            "requireReturnType": true,
+            "requireParamDescription": false,
+            "requireReturnDescription": true
+          }
+        ]
+      }
+  }
