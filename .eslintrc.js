@@ -5,7 +5,7 @@ module.exports = {
       "es6": true,
       "node": true,
     },
-    "extends": ["airbnb", "eslint:recommended"],
+    "extends": ["eslint:recommended","airbnb"],
     "parser": "babel-eslint",
     "parserOptions": {
       "sourceType": "module",

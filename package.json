@@ -11,7 +11,8 @@
     "build": "rm -rf dist && babel server/ --out-dir dist/ --ignore ./node_modules",
     "start:dev": "nodemon --exec babel-node server/index.js",
     "test": "set NODE_ENV=test && jest --coverage --forceExit",
-    "test:watch": "jest --watch "
+    "test:watch": "jest --watch ",
+    "linter": "./node_modules/.bin/eslint '**/*.js'"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
